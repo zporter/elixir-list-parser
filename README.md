@@ -1,21 +1,11 @@
 # ListParser
 
-**TODO: Add description**
+Fun with lexers and parsers in Elixir / Erlang. Inspired by
+[this blog post](https://andrealeopardi.com/posts/tokenizing-and-parsing-in-elixir-using-leex-and-yecc/).
 
-## Installation
+Notable code:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `list_parser` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:list_parser, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/list_parser](https://hexdocs.pm/list_parser).
-
+- [Lexer Definitions](src/list_lexer.xrl)
+- [Parser Definitions](src/list_parser.yrl)
+- [Doctest](lib/list_parser.ex#L11-L12)
+- [Parse function](lib/list_parser.ex#L15-L24)
