@@ -12,7 +12,14 @@ defmodule ListParser do
       [:foo, [1], [:bar, [2, 3]]]
 
   """
-  def parse(_str) do
-    :world
+  def parse(str) do
+    {:ok, tokens, _} =
+      str
+      |> to_charlist()
+      |> :list_lexer.string()
+
+    {:ok, list} = :list_parser.parse(tokens)
+
+    list
   end
 end
